@@ -33,6 +33,14 @@ For a new standalone tool, app, plugin, library, or skill, check for overlap in 
 - For five or more independent, small, checkable items, use available fast read-only workers such as `haiku-worker` in Claude Code. Assign a fixed report format and ask for evidence or `NOT FOUND`. Keep arithmetic, reconciliation, consequential judgments, and final synthesis in the main session. Check a sample of worker results before relying on them.
 - Ask workers for short reports with status, changed files, validation results, and blockers. Verify the combined changes through the project entry points. Tell the user which workers ran and what you verified.
 
+## Project management
+
+- Apply project management to every project, including older projects that never had it. Use the `project-management-toolkit` skill when it is installed; otherwise apply the same methods directly.
+- If a project has no `docs/pm/` folder, create it before the first non-trivial task: `docs/pm/charter.md` (purpose, objectives, scope and exclusions, milestones, stakeholders) and `docs/pm/risks.md` (a risk register with an owner and a response for every high risk). Size both to the project.
+- Keep status in the project's existing progress file, such as `docs/PROGRESS.md`, and add a Red, Amber or Green health line. Do not create a second status file.
+- Calculate estimates and schedule figures with a script rather than by eye, and give them as ranges with the assumptions they rest on.
+- Skip this for trivial tasks and for repositories marked as scratch or throwaway.
+
 ## Project roles
 
 Use installed roles by name when available. Apply the corresponding review or implementation responsibilities directly if a role is unavailable.
