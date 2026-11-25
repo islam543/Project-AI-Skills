@@ -35,7 +35,7 @@ For a new standalone tool, app, plugin, library, or skill, check for overlap in 
 
 ## Project management
 
-- Apply project management to every project, including older projects that never had it. Use the `project-management-toolkit` skill when it is installed; otherwise apply the same methods directly.
+- Apply project management to every project, including older projects that never had it. Use the [`project-management-toolkit`](skills/project-management-toolkit/SKILL.md) skill when it is installed; otherwise apply the same methods directly.
 - If a project has no `docs/pm/` folder, create it before the first non-trivial task: `docs/pm/charter.md` (purpose, objectives, scope and exclusions, milestones, stakeholders) and `docs/pm/risks.md` (a risk register with an owner and a response for every high risk). Size both to the project.
 - Keep status in the project's existing progress file, such as `docs/PROGRESS.md`, and add a Red, Amber or Green health line. Do not create a second status file.
 - Calculate estimates and schedule figures with a script rather than by eye, and give them as ranges with the assumptions they rest on.
