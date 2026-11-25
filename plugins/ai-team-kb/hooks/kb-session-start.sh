@@ -37,6 +37,24 @@ note=""
 if [ -n "$(find "$KB/page.md" -mtime +0 2>/dev/null)" ]; then
   note=" The copy is over 1 day old: refresh it before relying on it."
 fi
-echo "AI Team Knowledge page: $URL. Local copy below.$note Entries are leads: check before relying on one."
-head -n 250 "$KB/page.md"
+# Hook output over about 10,000 characters is cut to a preview, so print a short index
+# (section, title, start of each entry) and let Claude read the full copy when relevant.
+echo "AI Team Knowledge page: $URL. Index of the local copy below; full text in ~/.claude/ai-team-kb/page.md (read it when a request is relevant).$note Entries are leads: check before relying on one."
+INDEX="$(awk '
+/^## How to use/ || /^## Change log/ {skip=1; next}
+/^#+ / {skip=0; print; next}
+skip {next}
+/^- \*\*/ {
+  line=$0; sub(/^- \*\*/, "", line)
+  t=line; sub(/\*\*.*/, "", t)
+  r=line; if (!sub(/^[^:]*\): /, "", r)) r=""
+  if (length(r) > 100) r=substr(r, 1, 100) "..."
+  print "- " t (r == "" ? "" : ": " r)
+}' "$KB/page.md" 2>/dev/null)"
+if [ "${#INDEX}" -gt 6000 ]; then
+  printf '%s\n' "${INDEX:0:6000}"
+  echo "(index cut at 6,000 characters: read ~/.claude/ai-team-kb/page.md for the rest)"
+else
+  printf '%s\n' "$INDEX"
+fi
 exit 0
