@@ -12,6 +12,10 @@ Example request: “Study how requests move from intake to approval. Identify th
 
 Use [Project Management Toolkit](skills/project-management-toolkit/SKILL.md) to plan, estimate, schedule (critical path), track earned value, keep a risk register and write status reports. It includes templates and a self-tested calculator script (`pm_calc.py`, standard library only). The [global instructions template](AGENTS.md) applies it to every project, including older ones.
 
+## Build a startup in stages
+
+Use [Startup](skills/startup/SKILL.md) as `/startup` to work through four stages: idea, first version, launch and scale. Each stage has one question, a proof to reach before moving on, and a gate where the assistant argues against the next step before you commit.
+
 ## Use the collection
 
 - Copy the selected folder from [skills](skills) into your agent's skills directory, such as ~/.agents/skills for Codex or ~/.claude/skills for Claude Code. Keep the supporting files together.
