@@ -1,0 +1,11 @@
+{
+  "name": "live-wallpapers",
+  "version": "0.1.0",
+  "description": "Sixteen live wallpapers behind the chat in the Claude desktop app (ASCII scenes, illustrated scenes and dot art), a box above the prompt to pick them with previews, dot colours for Dot Tide, matching app colours for four themes, music with a play and stop button, a Skills browser, and a status dashboard with Neon Rain.",
+  "author": {
+    "name": "islam543"
+  },
+  "repository": "https://github.com/islam543/Project-AI-Skills",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "project-ai-mods",
+  "owner": { "name": "islam543" },
+  "metadata": { "description": "Claude Code desktop mods from Project AI Skills: live wallpapers and a box above the prompt." },
+  "plugins": [
+    {
+      "name": "live-wallpapers",
+      "source": "./live-wallpapers",
+      "description": "Sixteen live wallpapers behind the chat, a picker with previews, music, a Skills browser and matching app colours."
+    }
+  ]
+}

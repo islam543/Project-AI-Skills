@@ -16,6 +16,10 @@ Use [Project Management Toolkit](skills/project-management-toolkit/SKILL.md) to 
 
 Use [Startup](skills/startup/SKILL.md) as `/startup` to work through four stages: idea, first version, launch and scale. Each stage has one question, a proof to reach before moving on, and a gate where the assistant argues against the next step before you commit.
 
+## Theme the Claude desktop app
+
+[Live Wallpapers](mods/live-wallpapers/README.md) is a mod for the Claude desktop app: sixteen live wallpapers behind the chat, a box above the message box to pick them with previews, music with a play and stop button, a Skills browser, and matching app colours for four of the themes. Install it from a clone with `claude plugin marketplace add ./Project-AI-Skills/mods`, then `claude plugin install live-wallpapers@project-ai-mods`.
+
 ## Use the collection
 
 - Copy the selected folder from [skills](skills) into your agent's skills directory, such as ~/.agents/skills for Codex or ~/.claude/skills for Claude Code. Keep the supporting files together.
